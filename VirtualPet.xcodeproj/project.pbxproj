@@ -16,6 +16,9 @@
 		6E5BF9672C0B57D300311C8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BF9662C0B57D300311C8D /* ContentView.swift */; };
 		6E5BF9692C0B57D400311C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5BF9682C0B57D400311C8D /* Assets.xcassets */; };
 		6E5BF96C2C0B57D400311C8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5BF96B2C0B57D400311C8D /* Preview Assets.xcassets */; };
+		6EC258A22C0D6176000F4675 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC258A12C0D6176000F4675 /* Pet.swift */; };
+		6EC258A42C0D987A000F4675 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC258A32C0D987A000F4675 /* AnimatedImageView.swift */; };
+		6EC258A62C0DF9C8000F4675 /* SliderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC258A52C0DF9C8000F4675 /* SliderGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		6E5BF9662C0B57D300311C8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E5BF9682C0B57D400311C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E5BF96B2C0B57D400311C8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6EC258A12C0D6176000F4675 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		6EC258A32C0D987A000F4675 /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
+		6EC258A52C0DF9C8000F4675 /* SliderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,9 @@
 				6E5BF9662C0B57D300311C8D /* ContentView.swift */,
 				6E5BF9682C0B57D400311C8D /* Assets.xcassets */,
 				6E5BF96A2C0B57D400311C8D /* Preview Content */,
+				6EC258A12C0D6176000F4675 /* Pet.swift */,
+				6EC258A32C0D987A000F4675 /* AnimatedImageView.swift */,
+				6EC258A52C0DF9C8000F4675 /* SliderGame.swift */,
 			);
 			path = "VirtualPet Watch App";
 			sourceTree = "<group>";
@@ -240,8 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC258A22C0D6176000F4675 /* Pet.swift in Sources */,
 				6E5BF9672C0B57D300311C8D /* ContentView.swift in Sources */,
 				6E5BF9652C0B57D300311C8D /* VirtualPetApp.swift in Sources */,
+				6EC258A42C0D987A000F4675 /* AnimatedImageView.swift in Sources */,
+				6EC258A62C0DF9C8000F4675 /* SliderGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
