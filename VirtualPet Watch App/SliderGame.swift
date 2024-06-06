@@ -18,16 +18,17 @@ struct SliderGame: View {
     @State private var showingAlert = false
     @State private var goToContentView = false
     @State private var startGameButton = false
+    @EnvironmentObject var sharedData: SharedData
     
     var body: some View {
         NavigationView{
             ZStack{
-                Color.yellow.ignoresSafeArea()
+                Color.black.ignoresSafeArea()
                 if(startGameButton){
                     Text("Score: \(score)").position(CGPoint(x: 38, y: -16))
                     Circle().fill(Color.teal).frame(width: 20,height: 20).position(ballPosition)
                     Rectangle()
-                        .fill(Color.blue)
+                        .fill(Color.teal)
                         .frame(width: 40, height: 10)
                         .position(barPosition)
                         .gesture(
@@ -40,17 +41,17 @@ struct SliderGame: View {
                 else{
                     VStack{
                         if(isGameOver){
-                            Text("Game Over!").font(.title).foregroundStyle(Color.black)
-                            Text("Your score was: \(score)").foregroundStyle(Color.black).font(.system(size: 10))
-                            Text("Jellybean will get \(score) happiness points").foregroundStyle(Color.black).font(.system(size: 10))
+                            Text("Game Over!").font(.title).foregroundStyle(Color.teal)
+                            Text("Your score was: \(score)").foregroundStyle(Color.teal).font(.system(size: 10))
+                            Text("Jellybean will get \(score) happiness points").foregroundStyle(Color.teal).font(.system(size: 10))
                         }
                         Button("Start Game"){
                             startGameButton = true
                             startGame()
-                        }.padding().foregroundStyle(Color.black).buttonStyle(PlainButtonStyle())
+                        }.padding().foregroundStyle(Color.teal).buttonStyle(PlainButtonStyle())
                         
                         NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)){
-                            Text("Back to Jellybean").padding().foregroundStyle(Color.black)
+                            Text("Back to Jellybean").padding().foregroundStyle(Color.teal)
                         }.buttonStyle(PlainButtonStyle())
                     }
                 }
@@ -95,6 +96,7 @@ struct SliderGame: View {
             showingAlert = true
             isGameRunning = false
             startGameButton = false
+            sharedData.happiness += Double(score)
         }
     }
 }

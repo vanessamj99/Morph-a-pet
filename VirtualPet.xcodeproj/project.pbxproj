@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E1038572C10B47D00CF77C7 /* FeedingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1038562C10B47D00CF77C7 /* FeedingView.swift */; };
 		6E5BF9532C0B57D200311C8D /* VirtualPetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BF9522C0B57D200311C8D /* VirtualPetApp.swift */; };
 		6E5BF9552C0B57D200311C8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5BF9542C0B57D200311C8D /* ContentView.swift */; };
 		6E5BF9572C0B57D300311C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5BF9562C0B57D300311C8D /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6E1038562C10B47D00CF77C7 /* FeedingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedingView.swift; sourceTree = "<group>"; };
 		6E5BF94F2C0B57D200311C8D /* VirtualPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5BF9522C0B57D200311C8D /* VirtualPetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPetApp.swift; sourceTree = "<group>"; };
 		6E5BF9542C0B57D200311C8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				6EC258A12C0D6176000F4675 /* Pet.swift */,
 				6EC258A32C0D987A000F4675 /* AnimatedImageView.swift */,
 				6EC258A52C0DF9C8000F4675 /* SliderGame.swift */,
+				6E1038562C10B47D00CF77C7 /* FeedingView.swift */,
 			);
 			path = "VirtualPet Watch App";
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				6EC258A22C0D6176000F4675 /* Pet.swift in Sources */,
 				6E5BF9672C0B57D300311C8D /* ContentView.swift in Sources */,
 				6E5BF9652C0B57D300311C8D /* VirtualPetApp.swift in Sources */,
+				6E1038572C10B47D00CF77C7 /* FeedingView.swift in Sources */,
 				6EC258A42C0D987A000F4675 /* AnimatedImageView.swift in Sources */,
 				6EC258A62C0DF9C8000F4675 /* SliderGame.swift in Sources */,
 			);
