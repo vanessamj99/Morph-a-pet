@@ -35,6 +35,12 @@ struct CleaningView: View {
                                 cleaning = false
                                 cleanButtonVisible = true
                             }
+                            if(sharedData.cleanliness + 10 > 100){
+                                sharedData.cleanliness = 100
+                            }
+                            else{
+                                sharedData.cleanliness += 10
+                            }
                         }, label: {
                             Text("Clean")
                         }).padding().foregroundStyle(Color.teal).buttonStyle(PlainButtonStyle()).background(Color.indigo)
@@ -47,6 +53,12 @@ struct CleaningView: View {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 4){
                                 goingToBathroom = false
                                 bathroomButtonVisible = true
+                            }
+                            if(sharedData.bathroom + 10 > 100){
+                                sharedData.bathroom = 100
+                            }
+                            else{
+                                sharedData.bathroom += 10
                             }
                         }, label: {
                             Text("Bathroom")

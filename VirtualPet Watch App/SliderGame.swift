@@ -96,11 +96,16 @@ struct SliderGame: View {
             showingAlert = true
             isGameRunning = false
             startGameButton = false
-            sharedData.happiness += Double(score)
+            if(sharedData.happiness + Double(score) > 100){
+                sharedData.happiness = 100
+            }
+            else{
+                sharedData.happiness += Double(score)
+            }
         }
     }
 }
 
 #Preview {
-    SliderGame()
+    SliderGame().environmentObject(SharedData())
 }

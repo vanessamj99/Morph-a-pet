@@ -14,7 +14,7 @@ class SharedData: ObservableObject {
     @Published var hunger: Double = 70
     @Published var happiness: Double = 80
     @Published var cleanliness: Double = 70
-    @Published var bathroom: Double = 0
+    @Published var bathroom: Double = 80
     @Published var name: String = "Jellybean"
 }
 
@@ -63,6 +63,14 @@ struct ContentView: View {
             Spacer()
             Spacer()
         }.environmentObject(sharedData)
+            .onAppear{
+                if((sharedData.hunger + sharedData.cleanliness + sharedData.bathroom + sharedData.happiness)/4 > 100){
+                    sharedData.life = 100
+                }
+                else{
+                    sharedData.life = (sharedData.hunger + sharedData.cleanliness + sharedData.bathroom + sharedData.happiness)/4
+                }
+            }
     }
 }
 
