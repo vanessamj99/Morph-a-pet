@@ -29,7 +29,7 @@ struct FeedingView: View {
     @State private var tooFull = false
     
     @State private var currentFrame = 0
-    let spriteImages = (0...1).map { "blob\($0)" } // Adjust the range to the number of your frames
+    let spriteImages = (0...2).map { "bird\($0)" } // Adjust the range to the number of your frames
     let animationDuration = 0.8 // Time interval between frames
     
     var body: some View {
@@ -42,6 +42,8 @@ struct FeedingView: View {
                     }
                     ZStack{
                         Image(spriteImages[currentFrame])
+                            .resizable()
+                            .scaledToFit().frame(width: 80, height: 80)
                             .onAppear(perform: startAnimation)
                             .position(petPosition)
                         HStack{

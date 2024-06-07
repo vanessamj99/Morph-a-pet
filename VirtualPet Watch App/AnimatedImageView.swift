@@ -9,12 +9,13 @@ import SwiftUI
 
 struct AnimatedSpriteView: View {
     @State private var currentFrame = 0
-    let spriteImages = (0...1).map { "blob\($0)" } // Adjust the range to the number of your frames
-    let animationDuration = 0.9 // Time interval between frames
+    let spriteImages = (0...2).map { "bird\($0)" } // Adjust the range to the number of your frames
+    let animationDuration = 1.0 // Time interval between frames
 
     var body: some View {
         Image(spriteImages[currentFrame])
-            .scaledToFit()
+            .resizable()
+            .scaledToFit().frame(width: 80, height: 80)
             .onAppear(perform: startAnimation)
     }
     

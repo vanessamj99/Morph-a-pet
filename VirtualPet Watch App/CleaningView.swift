@@ -18,13 +18,11 @@ struct CleaningView: View {
     @EnvironmentObject var sharedData: SharedData
     
     @State private var currentFrame = 0
-    let spriteImages = (0...4).map { "bathroom\($0)" } // Adjust the range to the number of your frames
     let animationDuration = 0.9 // Time interval between frames
     
     var body: some View {
         ZStack{
             Color.gray.ignoresSafeArea()
-//            GeometryReader{ geometry in
             VStack{
                 HStack{
                     
@@ -70,25 +68,18 @@ struct CleaningView: View {
                         )
                 }
                 else if(goingToBathroom){
-                    Image(spriteImages[currentFrame])
-                        .scaledToFit()
-                        .onAppear(perform: startAnimation)
+                    AnimatedSpriteView()
                 }
                 else{
-                    AnimatedSpriteView()
+                    Image("bird").resizable()
+                        .scaledToFit().frame(width: 80, height: 80)
                 }
             }
             }.environmentObject(sharedData)
         }
-    private func startAnimation() {
-        Timer.scheduledTimer(withTimeInterval: animationDuration, repeats: true) { timer in
-            currentFrame = (currentFrame + 1) % spriteImages.count
-        }
-        currentFrame = 0
-    }
     
     }
 
 #Preview {
-    CleaningView()
+    CleaningView().environmentObject(SharedData())
 }
