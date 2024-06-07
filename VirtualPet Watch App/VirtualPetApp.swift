@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct VirtualPet_Watch_AppApp: App {
+    @StateObject private var sharedData = SharedData()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(sharedData)
         }
     }
 }

@@ -74,7 +74,7 @@ struct FeedingView: View {
             }
         }.onReceive(Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()) { _ in
             checkEaten()
-        }
+        }.environmentObject(sharedData)
     }
     
     func checkEaten(){
@@ -104,7 +104,7 @@ struct FeedingView: View {
             else{
                 tooFull = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 fishPosition = CGPoint(x: 20, y: 20)
                 fishEaten = false
                 isFishVisible = true
@@ -120,7 +120,7 @@ struct FeedingView: View {
             else{
                 tooFull = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 chickenPosition = CGPoint(x: 20, y: 20)
                 isChickenVisible = true
                 chickenEaten = false
@@ -136,7 +136,7 @@ struct FeedingView: View {
             else{
                 tooFull = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 carrotPosition = CGPoint(x: 20, y: 20)
                 isCarrotVisible = true
                 carrotEaten = false

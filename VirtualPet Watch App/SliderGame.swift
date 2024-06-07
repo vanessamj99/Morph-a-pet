@@ -62,7 +62,7 @@ struct SliderGame: View {
                     checkForCollision()
                 }
             }
-        }
+        }.environmentObject(sharedData)
         
     }
     
@@ -71,7 +71,7 @@ struct SliderGame: View {
     func startGame() {
         isGameRunning = true
         ballPosition = CGPoint(x: 30, y: 10)
-        ballVelocity = CGPoint(x: 0.6, y: -0.6)
+        ballVelocity = CGPoint(x: 0.9, y: -0.9)
         score = 0
     }
     

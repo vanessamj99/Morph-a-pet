@@ -13,14 +13,13 @@ class SharedData: ObservableObject {
     @Published var maxLife: Double = 100
     @Published var hunger: Double = 70
     @Published var happiness: Double = 80
-    @Published var cleanliness: Double = 100
+    @Published var cleanliness: Double = 70
     @Published var bathroom: Double = 0
     @Published var name: String = "Jellybean"
 }
 
 struct ContentView: View {
-    @StateObject private var sharedData = SharedData()
-//    let pet: Pet = Pet(name: "Jellybean", life: sharedData.life, maxLife: 100, hunger: 100, happiness: 100, cleanliness: 100, bathroom: 0)
+    @EnvironmentObject var sharedData: SharedData
     var body: some View {
         NavigationStack{
             VStack {
@@ -47,17 +46,17 @@ struct ContentView: View {
                         }
                         VStack{
                             Text("Clean").font(.system(size: 14))
-                            NavigationLink(destination: SliderGame()){
+                            NavigationLink(destination: CleaningView()){
                                 ProgressView(value: (sharedData.cleanliness/100), total: 1).progressViewStyle(CircularProgressViewStyle(tint: Color.green)).frame(width: 24, height: 24).padding().scaleEffect(0.7)
                             }.clipShape(Circle()).frame(width: 34, height: 34)
                         }
                         VStack{
                             Text("Bathroom").font(.system(size: 14))
-                            NavigationLink(destination: SliderGame()){
+                            NavigationLink(destination: CleaningView()){
                                 ProgressView(value: (sharedData.bathroom/100), total: 1).progressViewStyle(CircularProgressViewStyle(tint: Color.green)).frame(width: 24, height: 24).padding().scaleEffect(0.7)
                             }.clipShape(Circle()).frame(width: 34, height: 34)
                         }
-                    }
+                    }.padding()
                 }
             }
             .padding()
