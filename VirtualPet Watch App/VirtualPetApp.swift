@@ -12,7 +12,8 @@ struct VirtualPet_Watch_AppApp: App {
     @StateObject private var sharedData = SharedData()
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(sharedData)
+            ContentView()
+                .environmentObject(sharedData)
         }
     }
 }
